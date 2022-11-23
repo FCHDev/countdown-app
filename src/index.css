@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit&family=Lobster&family=Poppins&family=Prompt&family=Roboto+Mono&family=Sono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mort {
+    color: crimson;
+    font-weight: bold;
+}
+
+.mort-user {
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+.clignote  {
+    animation-duration: .8s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+}
+@keyframes clignoter {
+    0%   { opacity:1; }
+    40%   {opacity:0; }
+    100% { opacity:1; }
+}
+
+.warning  {
+    animation-duration: .8s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+}
+@keyframes clignoter {
+    0%   { opacity:1; }
+    40%   {opacity:0; }
+    100% { opacity:1; }
+}
+
+.tooLate {
+    display: none;
+}
+
+
+.tableau {
+    width: 100vw;
+    min-height: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 10px;
+}
+.tableau:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.tableau td {
+    width: 50%;
+    padding: 12px;
+}
+
+.tableau td:nth-child(2) {
+    font-weight: bold;
+    color: cornflowerblue;
+}
+
+.eventItem {
+    border: none;
+    border-radius: 15px;
+    background: #e8e5e5;
+    padding: 10px 14px;
+}
+
+@media screen and (min-width: 760px){
+    .tableau {
+        align-items: center;
+    }
+
+    .eventItem {
+        width: 100%;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        background: lightgray;
+        padding: 10px;
+    }
+}
